@@ -40,7 +40,7 @@ conv_d = get_conversations()
 
 def get_users():
     users_d = {}
-    users_list_url = 'https://slack.com/api/users.list?limit=9999'
+    users_list_url = 'https://slack.com/api/users.list?limit=1000'
     users_list = get_content(users_list_url)
     if 'members' not in users_list.keys(): return users_d
     for member in users_list['members']:
